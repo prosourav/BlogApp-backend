@@ -1,4 +1,4 @@
-import Post from "../schema/post-schema.js";
+import Post from "../model/post-schema.js";
 
 export const createPost = async (request, response) => {
   try {
