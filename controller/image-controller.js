@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import grid from "gridfs-stream";
 
-const url = "https://sleepy-bastion-19875.herokuapp.com";
+const url = "http://localhost:8000";
 
 let gfs;
 const conn = mongoose.connection;
