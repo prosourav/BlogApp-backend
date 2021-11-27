@@ -3,6 +3,12 @@ import Connection from "./connection/db.js";
 import Router from "./routes/route.js";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
 
 const app = express();
 const PORT = 8000;
@@ -16,4 +22,4 @@ app.listen(PORT, () => {
   console.log(`server is running successfully on ${PORT}`);
 });
 
-Connection();
+Connection(username, password);
