@@ -11,7 +11,7 @@ const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 app.use(cors());
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
